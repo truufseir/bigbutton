@@ -1,0 +1,100 @@
+0.Put in driver.
+1.Open serial terminal.
+2.Choose serial port.
+3.Put into serial monitor the following.
+
+
+Test as cut... 
+Av00Av00Av00Av00Av00Av00Av00Av00Av00Av00Av00Av00
+
+Default program...
+Ax00Ac00Av00Az00As00Ay00Af00Aa00Ap00CZ00DJ00Ao00
+
+test2
+AxAcAvAz00As00Ay00Af00Aa00Ap00CZ00DJ00Ao00
+
+/* local variable definition */
+
+
+   switch(EEPROM.read(addr)) {
+      case 'A' :
+         alter_keystroke=KEY_LEFT_CTRL;
+         break;
+	  case 'B' :
+         alter_keystroke=KEY_LEFT_SHIFT;
+         break;
+	  case 'C' :
+         alter_keystroke=KEY_LEFT_ALT;
+         break;
+	  case 'D' :
+         alter_keystroke=KEY_LEFT_GUI;
+         break;
+	  case 'E' :
+         alter_keystroke=KEY_RIGHT_CTRL;
+         break;
+	  case 'F' :
+         alter_keystroke=KEY_RIGHT_SHIFT;
+         break;
+	  case 'G' :
+         alter_keystroke=KEY_RIGHT_ALT;
+         break;
+	  case 'H' :
+         alter_keystroke=KEY_RIGHT_GUI;
+         break;
+	  case 'I' :
+         alter_keystroke=KEY_UP_ARROW;
+         break;
+	  case 'J' :
+         alter_keystroke=KEY_DOWN_ARROW;
+         break;
+	  case 'K' :
+         alter_keystroke=KEY_LEFT_ARROW;
+         break;
+	  case 'L' :
+         alter_keystroke=KEY_RIGHT_ARROW;
+         break;
+	  case 'M' :
+         alter_keystroke=KEY_BACKSPACE;
+         break;
+	  case 'N' :
+         alter_keystroke=KEY_RETURN;
+         break;
+	  case 'O' :
+         alter_keystroke=KEY_ESC;
+         break;
+	  case 'P' :
+         alter_keystroke=KEY_INSERT;
+         break;
+	  case 'Q' :
+         alter_keystroke=KEY_DELETE;
+         break;
+	  case 'R' :
+         alter_keystroke=KEY_PAGE_UP;
+         break;
+	  case 'S' :
+         alter_keystroke=KEY_PAGE_DOWN;
+         break;
+	  case 'T' :
+         alter_keystroke=KEY_HOME;
+         break;
+	  case 'U' :
+         alter_keystroke=KEY_END;
+         break;
+	  case 'V' :
+         alter_keystroke=KEY_CAPS_LOCK;
+         break;
+	  case 'W' :
+         alter_keystroke=KEY_F1;
+         break;
+	  case 'X' :
+         alter_keystroke=KEY_F2;
+         break;
+	  case 'Y' :
+         alter_keystroke=KEY_F3;
+         break;
+	  case 'Z' :
+         alter_keystroke=KEY_F4;
+         break;
+	 default :
+         alter_keystroke=EEPROM.read(addr);
+   }
